@@ -8,6 +8,34 @@ This plugin swaps DLSS with FSR to enable upscaling and frame generation in game
 - Check if Framegen mod path exists
 - Add launch option to the running game to enable the patch
 
+# Install
+
+### Prerequisites
+
+Decky Loader must already be installed.
+
+### Quick Install / Update
+
+Run the following in terminal, then reboot. Note that this works both for installing or updating the plugin
+
+```
+curl -L https://github.com/xXJSONDeruloXx/Decky-Framegen/raw/main/install.sh | sh
+```
+
+### Manual Install
+
+Download the latest release from the [releases page](https://github.com/xXJSONDeruloXx/Decky-Framegen/releases)
+
+Unzip the `tar.gz` file, and move the `Decky-Framegen` folder to your `$HOME/homebrew/plugins` directory
+
+then run:
+
+```
+sudo systemctl restart plugin_loader.service
+```
+
+then reboot your machine.
+
 ## Credits
 
 - FakeMichau for various tools leveraged in this script, including fgmod, innoextract and fakenvapi: https://github.com/FakeMichau

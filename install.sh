@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+if [ "$EUID" -eq 0 ]
+  then echo "Please do not run as root"
+  exit
+fi
+
+
+echo "removing previous install if it exists"
+
+cd $HOME
+
+sudo rm -rf $HOME/homebrew/plugins/Decky-Framegen
+
+echo "installing Decky-Framegen plugin"
+
+curl -L $(curl -s https://api.github.com/repos/xXJSONDeruloXx/Decky-Framegen/releases/latest | grep "browser_download_url" | cut -d '"' -f 4) -o $HOME/Decky-Framegen.tar.gz
+sudo tar -xzf Decky-Framegen.tar.gz -C $HOME/homebrew/plugins
+
+rm  $HOME/Decky-Framegen.tar.gz
+sudo systemctl restart plugin_loader.service
+
+echo "Installation complete"
