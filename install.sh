@@ -13,7 +13,7 @@ sudo rm -rf $HOME/homebrew/plugins/Decky-Framegen
 
 echo "installing Decky-Framegen plugin"
 
-curl -L $(curl -s https://api.github.com/repos/xXJSONDeruloXx/Decky-Framegen/releases/latest | grep "browser_download_url" | cut -d '"' -f 4) -o $HOME/Decky-Framegen.tar.gz
+curl -L $(curl -s https://api.github.com/repos/xXJSONDeruloXx/Decky-Framegen/releases/latest | grep "browser_download_url" | cut -d '"' -f 4) -o $HOME/Decky-Framegen.zip
 sudo unzip Decky-Framegen.zip
 sudo mv Decky-Framegen/Decky-Framegen $HOME/homebrew/plugins/
 
